@@ -12,10 +12,39 @@
 	<script src="libraries/p5.sound.js"></script>
 	<script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
 	<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="sketch.js"></script>
+
 
 </head>
 <body>
+<script>
+	$.getJSON('https://api.apify.com/v2/key-value-stores/vpfkeiYLXPIDIea2T/records/LATEST?disableRedirect=true', function(data) {
+        
+        var infected = `${data.infected}`;
+        var deceased = `${data.deceased}`;
+        var recovered = `${data.recovered}`;
+                    
+        $(".infected").html(infected);
+        $(".deceased").html(deceased);
+        $(".recovered").html(recovered);
+    });
+</script>
+<div style="column-count: 3">
+	<div>
+		<h1>FALLECIDOS</h1>
+		<h1 class="deceased"></h1>
+	</div>
+	<div>
+		<h1>INFECTADOS</h1>
+		<h1 class="infected"></h1>
+	</div>
+	<div>
+		<h1>RECUPERADOS</h1>
+		<h1 class="recovered"></h1>
+	</div>
+</div>
+
 <div id='map' style='width: 800px; height: 600px;'></div>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1Ijoiam9lbDMtMTciLCJhIjoiY2twcTY5Nng3MDBneDJucXYyZ3FjdDB1eiJ9.efRkYMIiV-Uv0c0eQPMj0Q';
@@ -25,7 +54,7 @@
     center:[-102.552784, 23.634501],
     zoom:4.2
   });
-</script>
+</script> 
 
 </body>
 </html>
