@@ -10,7 +10,8 @@ function setup() {
   		mapboxgl.accessToken = 'pk.eyJ1Ijoiam9lbDMtMTciLCJhIjoiY2twcTY5Nng3MDBneDJucXYyZ3FjdDB1eiJ9.efRkYMIiV-Uv0c0eQPMj0Q';
 
 
-  createCanvas(720, 800)
+  var cnv = createCanvas(800, 800)
+  cnv.parent(mapDiv)
   // array data filled with objects
   // Objects are variables too. But objects can contain many values.
   // The values are written as name:value pairs 
@@ -68,7 +69,7 @@ colors = [
 function draw() {
   background(28, 110, 127)
   push()
-  translate(10,650)
+  translate(60,650)
   // 
   data.forEach((el,i) => {
       push()
