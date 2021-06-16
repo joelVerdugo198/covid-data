@@ -34,8 +34,7 @@ header {
     flex-direction: row;
     text-transform: uppercase;
     justify-content: space-between;
-    background-color: #d32f2f;
-    box-shadow: 5px 7px 5px black;
+    box-shadow: 5px 7px 10px black;
 }
 .container{
     display: block;

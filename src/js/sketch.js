@@ -67,7 +67,7 @@ colors = [
 
 
 function draw() {
-  background(28, 110, 127)
+  background("#080C40")
   push()
   translate(60,650)
   // 

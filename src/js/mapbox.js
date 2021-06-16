@@ -5505,7 +5505,7 @@ map.addLayer({
 map.on('click', 'entidad_nombre', function (e) {
 new mapboxgl.Popup()
 .setLngLat(e.lngLat)
-.setHTML(`<p>${e.features[0].properties.entidad_nombre}</p><p>infected:${states[e.features[0].properties.entidad_nombre].infected}</p><p>deceased:${states[e.features[0].properties.entidad_nombre].deceased}</p>`)
+.setHTML(`<p>${e.features[0].properties.entidad_nombre}</p><p>Infectados:${states[e.features[0].properties.entidad_nombre].infected}</p><p>Fallecidos:${states[e.features[0].properties.entidad_nombre].deceased}</p>`)
 .addTo(map);
 });
  
